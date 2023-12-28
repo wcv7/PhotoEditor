@@ -5,6 +5,11 @@ print(os.getcwd())
 Edited = os.path.join(cwd + r"\Edited")
 Images = os.path.join(cwd + r"\Images")
 
+if os.path.isdir(Edited) != True:
+    os.mkdir(Edited)
+if os.path.isdir(Images) != True:
+    os.mkdir(Images)
+
 user = input("Smooth, Sharpen Or Blur [S, Sr, B] or Enhance Using Colour, Contrast or Sharpness [Cl, C, Sh] > ").upper()
 
 for filename in os.listdir(Images):
